@@ -12,6 +12,7 @@ export class DashBoardPage extends BasePage {
 
     async clickSignInBtn() {
         await this.signInBtn.click();
+        this.loginForm = new LoginForm(this._page);
         return new LoginForm(this._page);
     }
     async clickRegistrationBtn() {
