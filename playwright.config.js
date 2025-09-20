@@ -30,7 +30,7 @@ export default defineConfig({
   use: {
     baseURL: `https://${process.env.HTTP_CREDENTIALS_USERNAME}:${process.env.HTTP_CREDENTIALS_PASSWORD}@${process.env.BASE_URL}`,
     video: 'on',
-    trace: 'on-first-retry',
+    trace: 'on',
   },
 
   projects: [
