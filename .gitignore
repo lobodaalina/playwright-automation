@@ -67,6 +67,8 @@ web_modules/
 
 # dotenv environment variable files
 .env
+!.env.qa1
+!.env.qa2
 .env.*
 !.env.example
 
