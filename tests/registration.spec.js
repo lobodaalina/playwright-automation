@@ -48,10 +48,12 @@ test.describe('Registration tests', () => {
         await registrationForm.isVisible();
     });
 
-    test('Can register a user with valid info', async ({ page }) => {
+    test('Can register a user with valid info', async ({ page }, testInfo) => {
+        const suffix = `${Date.now()}_${testInfo.workerIndex}`;
+        const email = `lobodaalina99+${suffix}@gmail.com`;
         await registrationForm.fillName("Alina")
         await registrationForm.fillLastName('Loboda')
-        await registrationForm.fillEmail('lobodaalina99+aa655@gmail.com')
+        await registrationForm.fillEmail(email)
         await registrationForm.fillPassword('123456Test')
         await registrationForm.fillRepeatPassword('123456Test')
         await registrationForm.verifyRegisterButtonActive()
