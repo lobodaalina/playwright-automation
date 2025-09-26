@@ -8,11 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.55.0-jammy
-    strategy:
-      matrix:
-        envName: [qa1, qa2]   
     env:
-      ENV: ${{ matrix.envName }}  
+      ENV: qa1
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
