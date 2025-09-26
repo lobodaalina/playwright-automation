@@ -51,7 +51,7 @@ test.describe('Registration tests', () => {
     test('Can register a user with valid info', async ({ page }) => {
         await registrationForm.fillName("Alina")
         await registrationForm.fillLastName('Loboda')
-        await registrationForm.fillEmail('lobodaalina99+aa65@gmail.com')
+        await registrationForm.fillEmail('lobodaalina99+aa655@gmail.com')
         await registrationForm.fillPassword('123456Test')
         await registrationForm.fillRepeatPassword('123456Test')
         await registrationForm.verifyRegisterButtonActive()
